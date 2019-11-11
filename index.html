@@ -38,21 +38,12 @@
 
 		  const scene = new THREE.Scene();
 
-		  // {
-		  //   const color = 0xFFFFFF;
-		  //   const intensity = 1;
-		  //   const light = new THREE.DirectionalLight(color, intensity);
-		  //   light.position.set(-1, 2, 4);
-		  //   scene.add(light);
-		  // }
-
 		  const boxWidth = 2;
 		  const boxHeight = 2;
 		  const boxDepth = 0.01;
 		  const geometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
 
 		  function makeInstance(geometry, color, x) {
-		    //const material = new THREE.MeshPhongMaterial({color});
 		    const texture = new THREE.TextureLoader().load('images/card_amanda.jpeg');
 		    const material = new THREE.MeshBasicMaterial( { map: texture } );
 
@@ -66,8 +57,6 @@
 
 		  const cubes = [
 		    makeInstance(geometry, 0x44aa88,  0),
-		    //makeInstance(geometry, 0x8844aa, -2),
-		    //makeInstance(geometry, 0xaa8844,  2),
 		  ];
 
 		  const bgScene = new THREE.Scene();
@@ -75,7 +64,6 @@
 		  {
 		    const loader = new THREE.TextureLoader();
 		    const texture = loader.load(
-		      //'https://threejsfundamentals.org/threejs/resources/images/equirectangularmaps/tears_of_steel_bridge_2k.jpg',
 		      ''
 		    );
 		    texture.magFilter = THREE.LinearFilter;
